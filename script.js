@@ -20,7 +20,9 @@ startPromise.then((arr)=>{
 		let double=evenArr.map(x=>x*2);
 		setTimeout(()=>{
 			output.textContent=double.toString();
+			resolve(double);
 		},2000)
 	})
-});
+})
+.catch((err)=>console.log(err))
 .catch((err)=>console.log(err));
